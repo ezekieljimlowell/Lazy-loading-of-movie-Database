@@ -4,6 +4,8 @@ import { Movies } from "./Movies";
 import axios from "axios";
 import styles from './MovieDbLazyLoad.module.css';
 
+export const apiFunction = (API) => API;
+
 export const MovieDbLazyLoad = () => {
     const [movies, setMovies] = useState([]);
     const [pageNumber, setPageNumber] = useState(1);
@@ -18,6 +20,7 @@ export const MovieDbLazyLoad = () => {
 
     useEffect(() => {
         fetchMovies().then(data => setMovies(data.data.results)).catch(error => setError(error));
+        apiFunction(MOVIE_API);
     }, [movies])
 
     return (<>
