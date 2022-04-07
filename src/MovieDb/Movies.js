@@ -1,5 +1,5 @@
 import React from "react";
-import LazyLoad from "react-lazy-load";
+//import LazyLoad from "react-lazy-load";
 import styles from './Movies.module.css';
 
 const imageApi = "https://image.tmdb.org/t/p/original";
